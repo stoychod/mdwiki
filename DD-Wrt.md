@@ -4,7 +4,7 @@ DD-Wrt commands
 #### Content 
 1.[Web interface](#Web_interface)
 2.[Wifi](#Wifi)
-3.[Gathering info](#Gathering_info)
+3.[Gathering info](#Gathering-info)
 
 _________________
 ### Web interface
