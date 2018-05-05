@@ -1,13 +1,14 @@
 DD-Wrt commands
 ===============
 
-#### Content 
-1.[Web interface](#Web_interface)
-2.[Wifi](#Wifi)
-3.[Gathering info](#Gathering-info)
+#### Content
+1. [Web interface](#web-interface)
+2. [Wifi](#wifi)
+3. [Gathering info](#gathering-info)
 
-_________________
-### Web interface
+<br><br>
+
+## Web interface
 _________________
 
 #### Start Web interface
@@ -17,44 +18,70 @@ httpd -p 80
 ```
 
 #### Stop Web interface
-    killall httpd
+    
+```bash
+killall httpd
+```
 
 #### Enable Web interface
-    nvram set http_enable=1
-    nvram commit
+    
+```bash    
+nvram set http_enable=1
+nvram commit
+```
 
 #### Disable Web interface
-    nvram set http_enable=0
-    nvram commit
+    
+```bash
+nvram set http_enable=0
+nvram commit
+```
 
-____
-### Wifi
+<br><br>
+
+## Wifi
 ____
 
 #### Enable WiFi in N only mode
-    nvram set ath0_net_mode=n2-only
-    nvram commit
+    
+```bash    
+nvram set ath0_net_mode=n2-only
+nvram commit
+```
 
 #### Disable WiFi
-    nvram set ath0_net_mode=disabled
-    nvram commit
- 
-__________________
+    
+```bash
+nvram set ath0_net_mode=disabled
+nvram commit
+``` 
+<br><br>
 
-### Gathering info
+## Gathering info
 __________________
 
 #### Show wireless devices
+
 ```bash
 iw dev
 ```
+
 #### Show connected wifi devices
-    iw dev <interface> station dump
+    
+ ```bash   
+iw dev <interface> station dump
+```
 
 #### Show dhcp leases
-    cat /tmp/dnsmasq.leases
+    
+```bash    
+cat /tmp/dnsmasq.leases
+```
 
 #### Device names
-    eth0 - Wan
-    ath0 - WiFi (Atheros)
-    br0  - Ehternet (192.168.1.1)
+
+```    
+eth0 - Wan
+ath0 - WiFi (Atheros)
+br0  - Ehternet (192.168.1.1)
+```
